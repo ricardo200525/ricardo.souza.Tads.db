@@ -1,0 +1,20 @@
+
+
+    SELECT produto,vendedor, data_venda
+    from VENDAS
+    WHERE VENDEDOR = 'Ana'
+    order by data_venda;
+
+    SELECT SUM(valor) AS total_eletronicos
+FROM VENDAS
+WHERE categoria = 'Eletrônicos';
+
+
+select valor
+from VENDAS
+where valor BETWEEN 200 and 1000;
+
+SELECT vendedor, COUNT(*) AS numero_vendas, SUM(valor) AS soma_valor
+FROM vendas
+GROUP BY vendedor
+ORDER BY numero_vendas DESC;
